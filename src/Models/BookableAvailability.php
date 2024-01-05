@@ -20,10 +20,10 @@ abstract class BookableAvailability extends Model
     protected $fillable = [
         'bookable_id',
         'bookable_type',
-        'range',
+        //'range',
         'from',
         'to',
-        'is_bookable',
+        //'is_bookable',
         'priority',
     ];
 
@@ -33,10 +33,10 @@ abstract class BookableAvailability extends Model
     protected $casts = [
         'bookable_id' => 'integer',
         'bookable_type' => 'string',
-        'range' => 'string',
+        //'range' => 'string',
         'from' => 'string',
         'to' => 'string',
-        'is_bookable' => 'boolean',
+        //'is_bookable' => 'boolean',
         'priority' => 'integer',
     ];
 
@@ -72,13 +72,13 @@ abstract class BookableAvailability extends Model
     {
         $this->setTable(config('rinvex.bookings.tables.bookable_availabilities'));
         $this->mergeRules([
-            'bookable_id' => 'required|integer',
-            'bookable_type' => 'required|string|strip_tags|max:150',
-            'range' => 'required|in:datetimes,dates,months,weeks,days,times,sunday,monday,tuesday,wednesday,thursday,friday,saturday',
-            'from' => 'required|string|strip_tags|max:150',
-            'to' => 'required|string|strip_tags|max:150',
-            'is_bookable' => 'required|boolean',
-            'priority' => 'nullable|integer',
+            //'bookable_id' => 'required|integer',
+            //'bookable_type' => 'required|string|strip_tags|max:150',
+            //'range' => 'required|in:datetimes,dates,months,weeks,days,times,sunday,monday,tuesday,wednesday,thursday,friday,saturday',
+            //'from' => 'required|string|strip_tags|max:150',
+            //'to' => 'required|string|strip_tags|max:150',
+            //'is_bookable' => 'required|boolean',
+            //'priority' => 'nullable|integer',
         ]);
 
         parent::__construct($attributes);
