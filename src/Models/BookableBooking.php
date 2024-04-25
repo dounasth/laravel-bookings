@@ -101,7 +101,7 @@ abstract class BookableBooking extends Model
             'currency' => 'required|alpha|size:3',
             'formula' => 'nullable|array',
             'canceled_at' => 'nullable|date',
-            'options' => 'nullable|array',
+            //'options' => 'nullable|array',
             'notes' => 'nullable|string|strip_tags|max:32768',
         ]);
 
