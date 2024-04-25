@@ -53,7 +53,7 @@ abstract class BookableBooking extends Model
         'currency' => 'string',
         'formula' => 'json',
         'canceled_at' => 'datetime',
-        'options' => 'array',
+        'options' => 'json',
         'notes' => 'string',
     ];
 
